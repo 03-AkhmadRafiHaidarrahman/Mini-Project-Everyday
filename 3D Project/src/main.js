@@ -23,6 +23,6 @@ const controls = new OrbitControls( camera, renderer.domElement );
 function animate() {
     renderer.render( scene, camera );
     cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    cube.rotation.y += 0.07;
 }
 renderer.setAnimationLoop( animate );
