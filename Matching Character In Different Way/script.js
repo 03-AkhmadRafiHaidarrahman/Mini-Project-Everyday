@@ -14,3 +14,22 @@ button.addEventListener("click",function(){
         Swal.fire("End Character With Number!");
     }
 })  
+let EmailValid = document.getElementById("EmailValid")
+let InputEmail = document.getElementById("Input-Email")
+let BtnEmail = document.getElementById("BtnEmail")
+
+BtnEmail.addEventListener("click",function(){
+let regex1 = /\w{1,4}\d(@gmail.com)$/
+let regex2 = /\w{5,7}\d(@gmail.com)$/
+let regex3 = /\w{8,}\d(@gmail.com)$/
+let value = InputEmail.value
+if(regex1.test(value)){
+    alert("Worst Email")
+}if(regex2.test(value)){
+    alert("Bad Email")
+}if(regex3.test(value)){
+    alert("Good Email")
+}
+})
+
+
