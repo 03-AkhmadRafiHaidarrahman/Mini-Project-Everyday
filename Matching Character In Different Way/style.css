@@ -56,3 +56,12 @@ label span{
     background: var(--primary-color);
 }
 
+li{
+    list-style: none;
+    padding: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
