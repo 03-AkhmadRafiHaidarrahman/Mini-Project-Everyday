@@ -58,5 +58,12 @@ const UrlInput = document.getElementById("UrlInput")
 const UrlBtn = document.getElementById("UrlBtn")
 
 UrlBtn.addEventListener("click",function(){
-    
+    let value = UrlInput.value
+    let InputReg = /^https?:\/\/[\w.-]+\.[a-z]{2,}$/
+
+    if(InputReg.test(value)){
+        alert("benar")
+    }else{
+        alert("salah")
+    }
 })
