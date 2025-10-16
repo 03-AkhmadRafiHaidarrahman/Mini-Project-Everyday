@@ -56,14 +56,35 @@ if(regex2.test(value)){
 
 const UrlInput = document.getElementById("UrlInput")
 const UrlBtn = document.getElementById("UrlBtn")
+let WarnUrl = document.getElementById("WarningUrl")
 
 UrlBtn.addEventListener("click",function(){
     let value = UrlInput.value
     let InputReg = /^https?:\/\/[\w.-]+\.[a-z]{2,}$/
 
     if(InputReg.test(value)){
+        let li1 = document.createElement("li")
+        li1.textContent = `Good Link!`
+        WarnUrl.appendChild(li1)
+        setTimeout(() => {
+        WarnUrl.removeChild(li1)
+        }, 1000);
+    }else{
+        alert("salah")
+    }
+})
+
+const Dateinp = document.getElementById("DateInp")
+const DateBtn = document.getElementById("DateBtn")
+
+DateBtn.addEventListener("click",function(){
+    let value = Dateinp.value
+    const regex = /^(\d[0-9])\.(\d[0-2])\.(20\d{2})$/
+
+    if(regex.test(value)){
         alert("benar")
     }else{
         alert("salah")
     }
+
 })
