@@ -112,5 +112,19 @@ BtnTag.addEventListener("click",function(){
         HtmlTag.removeChild(li1)
     }, 1000);
     }
+})
+
+const TimeInp = document.getElementById("TimeInp")
+const BtnTime = document.getElementById("BtnTime")
+
+BtnTime.addEventListener("click",function(){
+    let value = TimeInp.value
+    let regex = /^\d{2}\:\d{2}/
+
+    if(regex.test(value)){
+        alert(value)
+    }else{
+        alert('salah')
+    }
 
 })
