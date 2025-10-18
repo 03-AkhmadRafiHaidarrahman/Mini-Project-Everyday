@@ -79,12 +79,38 @@ const DateBtn = document.getElementById("DateBtn")
 
 DateBtn.addEventListener("click",function(){
     let value = Dateinp.value
-    const regex = /^(\d[0-9])\.(\d[0-2])\.(20\d{2})$/
+    const regex = /^(\d[0-9])[\-./](\d[0-2])[\-./](20\d{2})$/
 
     if(regex.test(value)){
         alert("benar")
     }else{
         alert("salah")
+    }
+
+})
+
+const InputTag = document.getElementById("InputTag")
+const BtnTag = document.getElementById("BtnTag")
+const HtmlTag = document.getElementById("HtmlTag")
+
+BtnTag.addEventListener("click",function(){
+    let value = InputTag.value
+    const regex = /(<\w{1,4}>)\w(<\/\w{1,4}>)$/
+    if(regex.test(value)){
+         let li1 = document.createElement("li")
+    li1.textContent = `Nice!`
+    HtmlTag.appendChild(li1)
+    setTimeout(() => {
+        HtmlTag.removeChild(li1)
+    }, 1000);
+    }else{
+        console.log("salah")
+    let li1 = document.createElement("li")
+    li1.textContent = `You Must Have any description inside or else`
+    HtmlTag.appendChild(li1)
+    setTimeout(() => {
+        HtmlTag.removeChild(li1)
+    }, 1000);
     }
 
 })
