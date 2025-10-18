@@ -122,9 +122,21 @@ BtnTime.addEventListener("click",function(){
     let regex = /^\d{2}\:\d{2}/
 
     if(regex.test(value)){
-        alert(value)
+        alert(`Nice ${value}`)
     }else{
         alert('salah')
     }
+})
 
+const EmptyInp = document.getElementById("EmptyInp")
+const BtnEmpty = document.getElementById("BtnEmpty")
+
+BtnEmpty.addEventListener("click",function(){
+    let value = EmptyInp.value
+    let regex = /^$/
+    if(regex.test(value)){
+        alert("benar")
+    }else{
+        alert("salah")
+    }
 })
