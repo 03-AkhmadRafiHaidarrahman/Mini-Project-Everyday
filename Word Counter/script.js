@@ -11,3 +11,7 @@ Input.addEventListener("input",function(){
     console.log(max)
 
 })
+
+clear.addEventListener("click",function(){
+    digit.textContent = 100
+})
