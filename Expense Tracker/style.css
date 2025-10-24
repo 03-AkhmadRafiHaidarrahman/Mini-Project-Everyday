@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 40% + max-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1{
+    margin: 1rem;
+}
+h4{
+    font-size: 1.444rem;
+}
+.balance{
+    margin: 0.5rem;
+    font-size: 1.444rem;
+    font-weight: bold;
+}
+.transaction{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.transaction input{
+    padding: 0.4rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 1rem 0;
+}
+form input{
+    padding: 0.4rem;
+    margin: 0 0 0.3rem 0 ;
+}
+form button{
+    padding: 0.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: teal;
+    width: 30%;
+    border: 0.2rem solid teal;
+    border-radius: 0.333rem;
+}
+form button:hover{
+    color: teal;
+    background-color: white;
+    cursor: pointer;
+}
