@@ -12,9 +12,10 @@ function amount(){
     return value
 }
 
-function clear(){
-    Transaction.value = ""
-    Amount.value = ""
+function clearAll(){
+    document.querySelectorAll("input").forEach(input =>{
+        input.value = ""
+    })
 }
 
 function transaction(){
@@ -24,7 +25,8 @@ function transaction(){
 
 
 function history(){
-
+    const sum = amount().reduce((a,b) => a+b,0)
+    return sum
 }
 
 
@@ -33,7 +35,7 @@ BtnSub.addEventListener("click",function(event){
     li.innerHTML = `${transaction()} <p>${amount()}</p>`
     balance.textContent = amount()
     if(li){
-        clear()
+        clearAll()
     }
     History1.appendChild(li)
     event.preventDefault()
