@@ -26,20 +26,12 @@ function transaction(){
     return value
 }
 
-
-function history(){
-    
-}
-
-
 BtnSub.addEventListener("click",function(event){
     event.preventDefault()
     let li = document.createElement("li")
     li.innerHTML = `${transaction()} <p>${Amount.value}</p>`
     balance.textContent = amount()
-    if(li){
-        clearAll()
-    }
+    li ? clearAll() : clearAll()
     History1.appendChild(li)
 })
 
