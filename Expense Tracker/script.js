@@ -7,9 +7,12 @@ let BtnSub = document.getElementById("BtnSub")
 
 let History1 = document.getElementById("history")
 
+let storing = []
 function amount(){
-    let value = Amount.value
-    return value
+    let value = Number(Amount.value)
+    storing.push(value)
+    const initial = storing.reduce((accumulator,currentValue) => accumulator+currentValue, 0)
+    return initial
 }
 
 function clearAll(){
@@ -25,12 +28,16 @@ function transaction(){
 
 
 function history(){
+    
+ 
+ 
     const sum = amount().reduce((a,b) => a+b,0)
     return sum
 }
 
 
 BtnSub.addEventListener("click",function(event){
+    event.preventDefault()
     let li = document.createElement("li")
     li.innerHTML = `${transaction()} <p>${amount()}</p>`
     balance.textContent = amount()
@@ -38,7 +45,6 @@ BtnSub.addEventListener("click",function(event){
         clearAll()
     }
     History1.appendChild(li)
-    event.preventDefault()
 })
 
 
