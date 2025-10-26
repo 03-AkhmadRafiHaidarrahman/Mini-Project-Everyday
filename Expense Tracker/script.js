@@ -29,17 +29,13 @@ function transaction(){
 
 function history(){
     
- 
- 
-    const sum = amount().reduce((a,b) => a+b,0)
-    return sum
 }
 
 
 BtnSub.addEventListener("click",function(event){
     event.preventDefault()
     let li = document.createElement("li")
-    li.innerHTML = `${transaction()} <p>${amount()}</p>`
+    li.innerHTML = `${transaction()} <p>${Amount.value}</p>`
     balance.textContent = amount()
     if(li){
         clearAll()
