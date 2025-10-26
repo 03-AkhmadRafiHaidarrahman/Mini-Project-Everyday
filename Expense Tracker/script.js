@@ -32,13 +32,15 @@ function transaction(){
 
 BtnSub.addEventListener("click",function(event){
     event.preventDefault()
-    let li = document.createElement("li")
+    if(amount() && transaction()){
+        let li = document.createElement("li")
     li.innerHTML = `${transaction()} <p>${Amount.value}</p>`
     let total = amount()
     balance.style.color = total < 0 ? "red" : "green"
     balance.textContent = amount()
     li ? clearAll() : clearAll()
     History1.appendChild(li)
+    }
 })
 
 
