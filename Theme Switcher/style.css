@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+button{
+    width: 10rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    background: lightgray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+}
+span{
+    background: aqua;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+span img{
+    width: 65%;
+    height: 65%;
+}
+
+.animate{
+    animation: after 2s backwards;
+}
+.stop{
+    transform: translateX(200%);
+    background: url(sun.png) aqua;
+}
+.start{
+    background: url(moon.png) aqua;
+    animation: before 2s forwards;
+}    
+@keyframes before {
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes after {
+    to{
+        transform: translateX(200%);
+    }
+}
