@@ -9,7 +9,7 @@ main{
     align-items: center;
     justify-content: center;
     background: white;
-    transition: background 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: background 3s cubic-bezier(0.19, 1, 0.22, 1);
     flex-direction: column;
     width: 100%;
 }

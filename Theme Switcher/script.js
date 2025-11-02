@@ -4,8 +4,6 @@ const square = document.getElementById("square")
 
 
 btn.addEventListener("click",function(){
-let sun = square.innerHTML = `<img src="sun.png">`
-let moon = square.innerHTML = `<img src="moon.png">`
 if(parseInt(square.style.left) > 10){
     document.querySelector("h1").style.color = 'black'
     square.style.left = '10px'
