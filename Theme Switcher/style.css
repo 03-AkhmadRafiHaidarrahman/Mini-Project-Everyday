@@ -8,6 +8,8 @@ main{
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background: white;
+    transition: background 1s cubic-bezier(0.19, 1, 0.22, 1);
     flex-direction: column;
     width: 100%;
 }
@@ -17,44 +19,29 @@ button{
     border-radius: 1rem;
     border: none;
     background: lightgray;
+    position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 0.2rem;
 }
 span{
-    background: aqua;
+    background: rgb(253, 215, 0);
+    left: 0.333rem;
     width: 3rem;
     height: 3rem;
     border-radius: 100rem;
     display: flex;
+    transition: all 1s cubic-bezier(1,.07,.53,.73);
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
 }
 span img{
-    width: 65%;
-    height: 65%;
+    transition: all 1s cubic-bezier(1,.07,.53,.73);
+    position: absolute;
+    width: 70%;
+    height: 70%;
 }
 
-.animate{
-    animation: after 2s backwards;
-}
-.stop{
-    transform: translateX(200%);
-    background: url(sun.png) aqua;
-}
-.start{
-    background: url(moon.png) aqua;
-    animation: before 2s forwards;
-}    
-@keyframes before {
-    to{
-        transform: translateX(0%);
-    }
-}
-@keyframes after {
-    to{
-        transform: translateX(200%);
-    }
-}
+
