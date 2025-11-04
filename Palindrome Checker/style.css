@@ -16,10 +16,14 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 10rem;
-    width: 20rem + max-content;
+    height: 20rem;
+    width: 25rem;
     border-radius: 0.333rem;
-    box-shadow: 0rem 0rem 1rem 0.222rem black;
+    box-shadow: 0rem 0rem 1rem 0.222rem rgb(201, 204, 52);
+    transition: border-radius 1s;
+}
+.container:hover{
+    border-radius: 10rem;
 }
 h1{
     margin: 1rem;
@@ -44,4 +48,38 @@ h1{
     color: rgb(0, 255, 149);
     border-radius: 1rem;
     font-size: 1rem;
+}
+li{
+    list-style: none;
+    width: 10rem;
+    text-align: center;
+    padding: 0.222rem;
+    margin: 0.222rem;
+    border-radius: 1rem;
+}
+.benar{
+    background: green;
+    color: white;
+    animation: benar 2s linear;
+}
+@keyframes benar{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.salah{
+    background: red;
+    animation: salah 2s linear;
+    color: white;
+}
+@keyframes salah{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
