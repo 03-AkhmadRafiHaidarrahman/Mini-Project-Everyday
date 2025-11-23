@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1763907615587,
+      "username": "rafi",
+      "password": "123"
+    },
+    {
+      "id": 1763907958664,
+      "usname": "Rafi",
+      "grade": "12",
+      "password": "ayam 123"
+    },
+    {
+      "id": 1763908037580,
+      "usname": "Rafi",
+      "grade": "12",
+      "password": "rafi"
+    }
+  ]
+}
