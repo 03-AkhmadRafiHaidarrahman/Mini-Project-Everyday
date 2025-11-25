@@ -1,4 +1,5 @@
 let fs = require("fs")
+const path = require("path")
 const { stdin, stdout } = require("process")
 let readline = require("readline")
 
@@ -11,6 +12,21 @@ function readDB(){
     let data = fs.readFileSync("database.json","utf-8")
     return JSON.parse(data)
 } 
+
+function cek(value){
+    const rd = JSON.parse(fs.readFileSync("database.json", "utf8"));
+
+    for (let i = 0; i < rd.users.length; i++) {
+        let obj = rd.users[i];
+        let values = Object.values(obj);
+
+        if (values.includes(value)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 function writeDB(db){
     fs.writeFileSync("database.json",JSON.stringify(db,null,2))
@@ -51,9 +67,16 @@ cl.question(` Welcome!
         }
         if(choice === "2"){
             console.log(`Okay LogIn!`)
-                cl.question("your username?",()=>{
-                    
-                    cl.close()
+                cl.question("your username?",(nm)=>{
+                    cl.question("than your password?",(ps)=>{
+                        if(cek(nm) && cek(ps)){
+                            console.log(`Your Log!`)
+                            cl.close()
+                        }else{
+                            console.log(`Can't find your account!`)
+                            cl.close()
+                        }
+                    })
                 })
         } 
     })
